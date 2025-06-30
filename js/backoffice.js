@@ -2,7 +2,7 @@
 const API_URL = "https://striveschool-api.herokuapp.com/api/product/";
 const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODVlZjIzNzIzZGQwMjAwMTUxZGM0ZWEiLCJpYXQiOjE3NTEwNTI4NTUsImV4cCI6MTc1MjI2MjQ1NX0.tOWS3X5gYLPewGgRPna-i2jQoRFOKAZO2G_JPDRl-NI";
 
-const form = document.getElementById("product-form");
+const form = document.getElementById("product-form"); 
 const resetBtn = document.getElementById("reset-btn");
 const productsList = document.getElementById("products-list");
 const tableBody = document.getElementById("table-body");
