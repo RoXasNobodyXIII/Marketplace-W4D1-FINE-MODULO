@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice - Gestione Prodotti</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Backoffice</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- Parte Login -->
+            <h2>Login</h2>
+            <form class="mb-4">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </section>
+        <section>
+            <!-- Parte di agg o modifica prodotto -->
+            <h2>Aggiungi / Modifica Prodotto</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <label>
+                    Nome:
+                    <input type="text" id="name" required>
+                </label>
+                <label>
+                    Descrizione:
+                    <input type="text" id="description" required>
+                </label>
+                <label>
+                    Brand:
+                    <input type="text" id="brand" required>
+                </label>
+                <label>
+                    Immagine (URL):
+                    <input type="url" id="imageUrl" required>
+                </label>
+                <label>
+                    Prezzo:
+                    <input type="number" id="price" name="price" min="0" max="10000" step="0.01" required>
+                </label>
+                <button type="submit">Salva</button>
+                <button type="button" id="reset-btn">Reset</button>
+            </form>
+        </section>
+        <section>
+            <!-- Lista Prodotti -->
+            <h2>Prodotti Esistenti</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Brand</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Azioni</th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../js/backoffice.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODVlZjIzNzIzZGQwMjAwMTUxZGM0ZWEiLCJpYXQiOjE3NTEwNTI4NTUsImV4cCI6MTc1MjI2MjQ1NX0.tOWS3X5gYLPewGgRPna-i2jQoRFOKAZO2G_JPDRl-NI" crossorigin="anonymous"></script>
+
+     <footer class="footer">Made by Manuel Perez</footer>
+</body>
+</html>
